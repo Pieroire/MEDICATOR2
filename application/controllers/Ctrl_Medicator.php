@@ -186,15 +186,16 @@ public function InsertionLeMedicament()
         }
 public function ModificationLeMedicament()
         {
-            $depot = $_POST['depot2'];
+            
             $nom = $_POST['nom2'];
             $famille = $_POST['famille2'];
             $compo = $_POST['composition2'];
             $effets = $_POST['effets2'];
             $contreindic = $_POST['contre2'];
             $prix = $_POST['prix2'];
+            $idMedicament = $_POST['idMedicament'];
             $this->load->model("Model_MedicamentPC");
-            $this->Model_MedicamentPC->ModifierLeMedicament($depot,$nom,$famille,$compo,$effets,$contreindic,$prix);
+            $this->Model_MedicamentPC->ModifierLeMedicament($nom,$famille,$compo,$effets,$contreindic,$prix,$idMedicament);
             //essai
     
         }

@@ -70,6 +70,9 @@ function ModifierLesVisiteurs(){
 }
     
 
+
+
+
 function InsererTypeIndividu()
 {
         //alert('toto');
@@ -141,7 +144,7 @@ function ModifierMedicament()
         {
                 type:"post",
                 url:"ModificationLeMedicament",
-                data: "depot2="+$('#txtDepot').val()+"&nom2="+$('#txtNom').val()+"&famille2="+$('#txtFam').val()+"&composition2="+$('#txtCompo').val()+"&effets2="+$('#txtEffets').val()+"&contre2="+$('#txtContre').val()+"&prix2="+$('#txtPrix').val(),
+                data: "nom2="+$('#txtNom').val()+"&famille2="+$('#txtFam').val()+"&composition2="+$('#txtCompo').val()+"&effets2="+$('#txtEffets').val()+"&contre2="+$('#txtContre').val()+"&prix2="+$('#txtPrix').val()+"&idMedicament="+$('#txtDepot').val(),
                 success:function(data)
                 {
                     $('#div2').empty();
@@ -154,5 +157,4 @@ function ModifierMedicament()
                 }
         }
     );
-
 }
