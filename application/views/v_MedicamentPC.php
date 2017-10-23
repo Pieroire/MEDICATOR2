@@ -60,6 +60,9 @@
         </script>
     </head>
     <body>
+        
+        <input id="idMedicament" hidden="" value="">
+        
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> <img src = "<?php echo base_url();?>Image/logo.png"></a><br>
         <h1> Medicaments </h1>
         <label>Depot légal: </label> <input id="txtDepot" type="text"><br>
