@@ -2,6 +2,7 @@
 
 class Ctrl_Medicator extends CI_Controller 
 {
+
       public function index()
     {
        
@@ -19,6 +20,7 @@ class Ctrl_Medicator extends CI_Controller
 //        
 //        
 //    }
+
 
     
     //PAGE REGION

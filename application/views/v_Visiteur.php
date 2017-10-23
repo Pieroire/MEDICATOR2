@@ -16,16 +16,16 @@
                 InsererLesVisiteurs();
                 });
             
-            $('#tdA').click(function(){
-                $('#txtMatricule').val($('#tdA').text());
-                $('#txtNom').val($('#tdB').text());
-                $('#txtPrenom').val($('#tdC').text());
-                $('#txtAdresse').val($('#tdD').text());
-                $('#txtCP').val($('#tdE').text());
-                $('#txtVille').val($('#tdF').text());
-                $('#txtDateE').val($('#tdG').text());
-                $('#txtCodeSec').val($('#tdH').text());
-                $('#txtCodeLabo').val($('#tdI').text());
+            $('tr').click(function(){
+                $('#txtMatricule').val($(this).children(0).eq(0).text());
+                $('#txtNom').val($(this).children(0).eq(1).text());
+                $('#txtPrenom').val($(this).children(0).eq(2).text());
+                $('#txtAdresse').val($(this).children(0).eq(3).text());
+                $('#txtCP').val($(this).children(0).eq(4).text());
+                $('#txtVille').val($(this).children(0).eq(5).text());
+                $('#txtDateE').val($(this).children(0).eq(6).text());
+                $('#txtCodeSec').val($(this).children(0).eq(7).text());
+                $('#txtCodeLabo').val($(this).children(0).eq(8).text());
             });
             
             $('#btnM').click(function(){
@@ -76,7 +76,16 @@
                         {
                         ?>
             <tbody>
-                <tr><td id="tdA"><?php echo $visiteur->VIS_MATRICULE; ?></td><td id="tdB"><?php echo $visiteur->VIS_NOM;?></td><td id="tdC"><?php echo $visiteur->Vis_PRENOM;?></td><td id="tdD"><?php echo $visiteur->VIS_ADRESSE;?></td><td id="tdE"><?php echo $visiteur->VIS_CP;?></td><td id="tdF"><?php echo $visiteur->VIS_VILLE;?></td><td id="tdG"><?php echo $visiteur->VIS_DATEEMBAUCHE;?></td><td id="tdH"><?php echo $visiteur->SEC_CODE;?></td><td id="tdI"><?php echo $visiteur->LAB_CODE;?></td></tr>
+                <tr><td><?php echo $visiteur->VIS_MATRICULE; ?></td>
+                    <td><?php echo $visiteur->VIS_NOM;?></td>
+                    <td><?php echo $visiteur->Vis_PRENOM;?></td>
+                    <td><?php echo $visiteur->VIS_ADRESSE;?></td>
+                    <td><?php echo $visiteur->VIS_CP;?></td>
+                    <td><?php echo $visiteur->VIS_VILLE;?></td>
+                    <td><?php echo $visiteur->VIS_DATEEMBAUCHE;?></td>
+                    <td><?php echo $visiteur->SEC_CODE;?></td>
+                    <td><?php echo $visiteur->LAB_CODE;?></td>
+                </tr>
             </tbody>
                  <?php 
                         }                       
