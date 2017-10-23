@@ -8,7 +8,8 @@
         <img src = "<?php echo base_url();?>Image/logo.png"><br><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
-        
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetRegion">Régions</a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteurs</a>
     </body>
 </html>
 
