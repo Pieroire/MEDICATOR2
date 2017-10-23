@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
      <body>
-        <a href="index.php/Ctrl_Medicator/GetRegion">Région</a>
+         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetRegion">Région</a>
         <br>
-        <a href="index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a>
         
     </body>
 </html>

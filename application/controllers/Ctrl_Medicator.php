@@ -3,15 +3,15 @@
 class Ctrl_Medicator extends CI_Controller 
 {
     
-    public function index()
-    {
-       
-        
-        $this->load->view("v_AccueilGB");
-        
-        
-        
-    }
+//    public function index()
+//    {
+//       
+//        
+//        $this->load->view("v_AccueilGB");
+//        
+//        
+//        
+//    }
 
     
     //PAGE REGION
