@@ -55,14 +55,24 @@ class Ctrl_Medicator extends CI_Controller
         
         
         $this->load->model("Model_Visiteur");
+        $this->load->model("Model_Secteur");
+        $this->load->model("Model_Labo");
+        
         
         $data['lesVisiteurs'] = $this->Model_Visiteur->GetAllVisiteurs();
+        $data['lesSecteurs'] = $this->Model_Secteur->GetAllSecteurs();
+        $data['lesLabos'] = $this->Model_Labo->GetAllLabos();
+        
+        
         
               
         $this->load->view("v_Visiteur", $data);
         
         
     }
+    
+    
+    
     
     public function InsertionVisiteur(){
         
@@ -102,6 +112,17 @@ class Ctrl_Medicator extends CI_Controller
         
         
     }
+    
+    
+    public function GetLocalisation(){
+        
+        $this->load->view("v_Localisation");
+        
+        
+        
+    }
+    
+    
     
     
 }

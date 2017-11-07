@@ -57,8 +57,70 @@
         <label>Code Postal :</label> <input id="txtCP" type="text"><br><br>
         <label>Ville :</label> <input id="txtVille" type="text"><br><br>
         <label>Date d'embauche :</label> <input id="txtDateE" type="date"><br><br>
-        <label>Code Secteur :</label> <input id="txtCodeSec" type="text"><br><br>
-        <label>Code Laboratoire :</label> <input id="txtCodeLabo" type="text"> <input id="btn1" type="button" value="Inserer"> <input id="btnM" type="button" value="Modifier">
+        <label>Code Secteur :</label> <!--<input id="txtCodeSec" type="text"><br><br>-->
+        
+        <select id="txtCodeSec">
+                
+                    <?php
+
+
+                    foreach($lesSecteurs as $secteur)
+                    {
+                    ?>
+                
+
+                <option value="<?php echo $secteur->SEC_CODE; ?>"><?php echo $secteur->SEC_LIBELLE; ?></option>
+                    
+                    <?php
+                    }
+                    ?>
+            </select><br><br>
+        
+        
+        
+        
+        <label>Code Laboratoire :</label> <!--<input id="txtCodeLabo" type="text">--> 
+            
+        <select id="txtCodeLabo">
+                
+                    <?php
+
+
+                    foreach($lesLabos as $labo)
+                    {
+                    ?>
+                
+
+                <option value="<?php echo $labo->LAB_CODE; ?>"><?php echo $labo->LAB_NOM; ?></option>
+                    
+                    <?php
+                    }
+                    ?>
+        </select>   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        <input id="btn1" type="button" value="Inserer"> <input id="btnM" type="button" value="Modifier">
         
         <br><br>
         
