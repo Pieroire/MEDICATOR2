@@ -116,12 +116,36 @@ class Ctrl_Medicator extends CI_Controller
     
     public function GetLocalisation(){
         
-        $this->load->view("v_Localisation");
+        
+        $this->load->model("Model_Visiteur");
+        $this->load->model("Model_Region");
+        
+        
+        $data['lesVisiteurs'] = $this->Model_Visiteur->GetAllVisiteurs();
+        $data['lesRegions'] = $this->Model_Region->GetAllRegions();
+        
+        
+        $this->load->view("v_Localisation", $data);
         
         
         
     }
     
+    
+    public function InsertionTravailleur(){
+        
+        $matriculeT = $_POST['matriculeT'];
+        $dateT = $_POST['dateT'];
+        $codeRegT = $_POST['codeRegT'];
+        $commentaireT = $_POST['commentaireT'];
+        
+        $this->load->model("Model_Localisation");
+        
+        $this->Model_Localisation->InsererTavail($matriculeT, $dateT, $codeRegT, $commentaireT);
+        
+        
+        
+    }
     
     
     

@@ -69,3 +69,32 @@ function ModifierLesVisiteurs(){
     
     
 }
+
+
+function InsererUnTravailleur(){
+    
+    
+    $.ajax
+    (
+        {
+                type:"post",
+                url:"InsertionTravailleur",
+                data: "matriculeT="+$('#lstVis option:selected').val()+"&dateT="+$('#lstVis option:selected').attr('name')+"&codeRegT="+$('#lstReg option:selected').val()+"&commentaireT="+$('#textareaT').val(),
+                success:function(data)
+                {
+                    $('#divT').empty();
+                    $('#divT').append(data);
+                },
+                error:function()
+                {
+                    
+                    alert('Erreur pour insérer!');
+                   
+                }
+        }
+    );
+    
+    
+    
+    
+}
