@@ -91,7 +91,7 @@ function InsererPosologie()
     (
             {
                 type:"post",
-                url:"<?php echo base_url();?>Ctrl_Medicator/InsertionPosologie",
+                url:"InsertionPosologie",
                 data:"depot="+$('#txtDepot').val()+"&typeIndiv="+$('#lstTypes option:selected').val()+"&dosage="+$('#lstDosages option:selected').val()+"&description="+$('#txtPoso').val(),
                 success:function(data)
                 {

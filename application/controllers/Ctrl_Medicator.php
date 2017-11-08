@@ -100,11 +100,11 @@ public function GetMedicamentsPosologie()
         }
 public function InsertionPosologie()
         {
-    $depot = $_POST['depot'];
-    $typeIndiv = $_POST['typeIndiv'];
-    $dosage = $_POST['dosage'];
-    $description = $_POST['description'];
-    $this->Model_PosologiePC->InsererPrescription($depot,$typeIndiv,$dosage,$description);
+            $depot = $_POST['depot'];
+            $typeIndiv = $_POST['typeIndiv'];
+            $dosage = $_POST['dosage'];
+            $description = $_POST['description'];
+            $this->Model_PosologiePC->InsererPrescription($depot,$typeIndiv,$dosage,$description);
         }
         
         }
