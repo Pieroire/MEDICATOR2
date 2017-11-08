@@ -46,6 +46,10 @@
     </head>
     <body>
 
+        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
+        
+        <br>
+        
         
         <input id="idVisiteur" hidden="" value="">
         
@@ -160,9 +164,9 @@
         <div id='divM'></div>
 
         
-        <br><br>
         
-        <a href="<?php echo base_url(); ?>">Accueil</a>
+        
+     
 
         
     </body>

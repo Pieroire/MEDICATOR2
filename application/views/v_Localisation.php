@@ -37,6 +37,7 @@
             $(btnT).click(function(){
                 //alert($('#textareaT').val());
                 InsererUnTravailleur();
+                alert("Vous avez selectionné "+$('#lstVis option:selected').text()+" travaillant depuis "+$('#lstVis option:selected').attr('name')+" dans la région "+$('#lstReg option:selected').text());
                 
             });
         }
@@ -59,6 +60,9 @@
         
     </head>
     <body>
+        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
+        
+        <br>
         
         <label>Selectionnez un visiteur et la région dans laquelle il travaille :</label><br><br>
         
@@ -122,6 +126,11 @@
         
         <div id="divT" hidden></div>
             
+       
+        
+        
+        
+        
         
         
     </body>

@@ -40,7 +40,9 @@
     </head>
     <body>
         
+        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
         
+        <br>
         
        
         <label>Cliquez sur la région à modifier :</label> <br><br>
@@ -73,8 +75,8 @@
         </div>
         
         <div id="divR"></div>
-        <br><br>
-        <a href="<?php echo base_url(); ?>">Accueil</a>
+        
+      
         
         
     </body>
