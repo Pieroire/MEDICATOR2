@@ -106,6 +106,7 @@
         
         <div id="div1"></div>
         <div id="div2"></div>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Posologie </a><br>
         <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
     
     </body>

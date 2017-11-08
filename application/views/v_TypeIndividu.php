@@ -61,7 +61,7 @@
                         {
                         $code=0;
                         ?>
-                <option name='optIndividu' value="<?php echo $types->TIN_CODE; ?>"> <?php echo $types->TIN_LIBELLE; ?> </option> 
+                <option name='optIndividu' value="<?php echo $types->TIN_CODE; ?>"><?php echo $types->TIN_LIBELLE; ?></option> 
                 <?php
                       $code =$types->TIN_CODE + 1; 
                         }                       
@@ -71,6 +71,7 @@
         <div id="div1"></div> 
         <div id="div2"></div>  
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Posologie </a><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
         </div>
     </body>

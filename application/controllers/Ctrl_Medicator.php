@@ -88,8 +88,26 @@ public function ModificationLeMedicament()
     
         }
         
+        
+public function GetMedicamentsPosologie()
+        {
+            $this->load->model("Model_PosologiePC");
+            $data['lesMedicamentsPosologie'] = $this->Model_PosologiePC->GetAllMedicamentsPosologie();
+            //Appel de la fonction GetAllTypesIndividus() dans le model
+            $data['lesTypesIndividusPosologie'] = $this->Model_PosologiePC->GetAllTypesIndividusPosologie();
+            $data['lesDosages'] = $this->Model_PosologiePC->GetAllDosage();
+            $this->load->view("v_PosologiePC",$data);
         }
-
+public function InsertionPosologie()
+        {
+    $depot = $_POST['depot'];
+    $typeIndiv = $_POST['typeIndiv'];
+    $dosage = $_POST['dosage'];
+    $description = $_POST['description'];
+    $this->Model_PosologiePC->InsererPrescription($depot,$typeIndiv,$dosage,$description);
+        }
+        
+        }
         ?>
 
 <!-- data:"depot="+$('#txtDepot').val()+"&nom="+$('#txtNom').val()+"&famille="+$('#txtFam').val()+"&composition="+$('#txtCompo').val()+"&effets="+$('txtEffets')+"&contre="+$('#txtContre').val()+"&prix="+$('#txtPrix').val(),-->

@@ -83,3 +83,75 @@ function ModifierMedicament()
         }
     );
 }
+
+
+function InsererPosologie()
+{
+    $.ajax
+    (
+            {
+                type:"post",
+                url:"<?php echo base_url();?>Ctrl_Medicator/InsertionPosologie",
+                data:"depot="+$('#txtDepot').val()+"&typeIndiv="+$('#lstTypes option:selected').val()+"&dosage="+$('#lstDosages option:selected').val()+"&description="+$('#txtPoso').val(),
+                success:function(data)
+                {
+                    $('#div5').empty();
+                    $('#div5').append(data);
+                },
+                error:function()
+                {
+                    //alert('Erreur pendant la modication!');
+                   // alert($('#txt1').val()+" "+$('#lstTypes option:selected').val());
+                }
+            }
+    );
+}
+
+
+
+
+
+//function go()
+//{
+//     $.ajax
+//    (
+//        {
+//                //type:"get",
+//                //url:"<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividusPosologie",
+//                url:"GetTypesIndividusPosologie",
+//                //data: "",
+//                success:function(data)
+//                {
+//                 $('#div3').empty();
+//                 $('#div3').append(data);   
+//                },
+//                error:function()
+//                {
+//                    //alert('Erreur pendant la modication!');
+//                   
+//                }
+//        }
+//    );
+//}
+//function go2()
+//{
+//     $.ajax
+//    (
+//        {
+//                //type:"get",
+//                //url:"<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividusPosologie",
+//                url:"GetTypesIndividusPosologie",
+//                //data: "",
+//                success:function(data)
+//                {
+//                 $('#div3').empty();
+//                 $('#div3').append(data);   
+//                },
+//                error:function()
+//                {
+//                    //alert('Erreur pendant la modication!');
+//                   
+//                }
+//        }
+//    );
+//}
