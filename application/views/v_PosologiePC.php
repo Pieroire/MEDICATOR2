@@ -115,7 +115,7 @@
         </table>
     <div id="div3"></div>
     <div id="div5"></div>
-
+<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
 <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
 </body>
 </html>

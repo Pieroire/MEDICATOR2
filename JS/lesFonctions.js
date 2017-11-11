@@ -91,7 +91,7 @@ function InsererPosologie()
     (
             {
                 type:"post",
-                url:"InsertionPosologie",
+                url:"InsertionDeLaPosologie",
                 data:"depot="+$('#txtDepot').val()+"&typeIndiv="+$('#lstTypes option:selected').val()+"&dosage="+$('#lstDosages option:selected').val()+"&description="+$('#txtPoso').val(),
                 success:function(data)
                 {
@@ -106,6 +106,27 @@ function InsererPosologie()
             }
     );
 }
+//function AfficherContreIndic()
+//{
+//   $.ajax
+//    (
+//            {
+//                type:"post",
+//                url:"GetAllMedicamentsContreIndication",
+//                data:"depotMed="+$('#txtDepot').val(),
+//                success:function(data)
+//                {
+//                    $('#div6').empty();
+//                    $('#div6').append(data);
+//                },
+//                error:function()
+//                {
+//                    //alert('Erreur pendant la modication!');
+//                   // alert($('#txt1').val()+" "+$('#lstTypes option:selected').val());
+//                }
+//            }
+//    ); 
+//}
 
 
 

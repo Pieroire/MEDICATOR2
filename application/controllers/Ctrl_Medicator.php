@@ -98,7 +98,7 @@ public function GetMedicamentsPosologie()
             $data['lesDosages'] = $this->Model_PosologiePC->GetAllDosage();
             $this->load->view("v_PosologiePC",$data);
         }
-public function InsertionPosologie()
+public function InsertionDeLaPosologie()
         {
             $depot = $_POST['depot'];
             $typeIndiv = $_POST['typeIndiv'];
@@ -106,6 +106,15 @@ public function InsertionPosologie()
             $description = $_POST['description'];
             $this->Model_PosologiePC->InsererPrescription($depot,$typeIndiv,$dosage,$description);
         }
+public function GetAllMedicamentsContreIndication()
+        {
+            
+            $this->load->model("Model_ContreIndicationPC");
+            $data['lesMedicaments'] = $this->Model_ContreIndicationPC->GetAllContreIndication();
+           // $depotMed = $_POST['depotMed']; 
+            //$data['lesContreIndic'] = $this->Model_ContreIndicationPC->GetContreIndicsByIds($depotMed);
+            $this->load->view("v_ContreIndicationPC",$data);
+        }     
         
         }
         ?>

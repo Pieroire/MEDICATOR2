@@ -72,6 +72,7 @@
         <div id="div2"></div>  
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Posologie </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
         </div>
     </body>
