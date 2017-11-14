@@ -17,17 +17,18 @@
                                 function()
                         {
                             //alert('coucou');
+                            
                          // AfficherContreIndic();
-                           $('#txtDepot').val($(this).children(0).eq(1).text());
+                           $('#txtDepot').val($(this).children(0).eq(0).text());
 //                            $('#txtNom').val($(this).children(0).eq(1).text());
 //                            $('#txtFam').val($(this).children(0).eq(2).text());
 //                            $('#txtCompo').val($(this).children(0).eq(3).text());
 //                            $('#txtEffets').val($(this).children(0).eq(4).text());
-                            $('#txtContre').val($(this).children(0).eq(5).text());
+//                            $('#txtContre').val($(this).children(0).eq(5).text());
 //                            $('#txtPrix').val($(this).children(0).eq(6).text());
 //                           //}
-                         // alert('sa fonctionne'+ $('#txtDepot').val());
-                          
+                        alert('sa fonctionne'+ $('#txtDepot').val());
+                          AfficherContreIndic();
                           
                           
                         }
@@ -41,18 +42,11 @@
 <body>
     <h1> Contre Indication d'un médicament</h1>
     
+    <input id="txtDepot" type="text" hidden>
 
-<table border="1.5">    
-            <thead>
-                <tr> <th>Medicament</th><th>Contre-Indication</th></tr>
-            </thead>                 
-            <tbody>
-                <tr>
-                    <td><input id="txtDepot" type="text" style="width: 300px;"></td> <td><input id="txtContre" type="text" style="width: 300px;" ></td>
-                </tr>
-
-            </tbody>
-</table>
+    <div id="divContre"></div>
+    
+    
     <table border="1.5">    
             <thead>
                 <tr> <th>Depot</th><th>Nom</th></tr>
@@ -85,7 +79,7 @@
         </table>
 
 
-    <div id="div6" hidden></div>
+   
 <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
 </body>
 </html>

@@ -106,27 +106,27 @@ function InsererPosologie()
             }
     );
 }
-//function AfficherContreIndic()
-//{
-//   $.ajax
-//    (
-//            {
-//                type:"post",
-//                url:"GetAllMedicamentsContreIndication",
-//                data:"depotMed="+$('#txtDepot').val(),
-//                success:function(data)
-//                {
-//                    $('#div6').empty();
-//                    $('#div6').append(data);
-//                },
-//                error:function()
-//                {
-//                    //alert('Erreur pendant la modication!');
-//                   // alert($('#txt1').val()+" "+$('#lstTypes option:selected').val());
-//                }
-//            }
-//    ); 
-//}
+function AfficherContreIndic()
+{
+   $.ajax
+    (
+            {
+                type:"get",
+                url:"GetAllMedicamentsContreIndicationV2",
+                data:"depotMed="+$('#txtDepot').val(),
+                success:function(data)
+                {
+                    $('#divContre').empty();
+                    $('#divContre').append(data);
+                },
+                error:function()
+                {
+                    //alert('Erreur pendant la modication!');
+                   // alert($('#txt1').val()+" "+$('#lstTypes option:selected').val());
+                }
+            }
+    ); 
+}
 
 
 

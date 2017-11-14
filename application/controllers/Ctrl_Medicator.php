@@ -104,18 +104,31 @@ public function InsertionDeLaPosologie()
             $typeIndiv = $_POST['typeIndiv'];
             $dosage = $_POST['dosage'];
             $description = $_POST['description'];
+            $this->load->model("Model_PosologiePC");
             $this->Model_PosologiePC->InsererPrescription($depot,$typeIndiv,$dosage,$description);
         }
+        
 public function GetAllMedicamentsContreIndication()
         {
             
             $this->load->model("Model_ContreIndicationPC");
             $data['lesMedicaments'] = $this->Model_ContreIndicationPC->GetAllContreIndication();
-           // $depotMed = $_POST['depotMed']; 
+           //$depotMed = $_GET['depotMed']; 
             //$data['lesContreIndic'] = $this->Model_ContreIndicationPC->GetContreIndicsByIds($depotMed);
+           // $data['lesPerturbateurs']=$this->Model_ContreIndicationPC->GetMedPerturbateursByIds($depotMed);
             $this->load->view("v_ContreIndicationPC",$data);
         }     
         
+        public function GetAllMedicamentsContreIndicationV2()
+        {
+            
+            $this->load->model("Model_ContreIndicationPC");
+          //  $data['lesMedicaments'] = $this->Model_ContreIndicationPC->GetAllContreIndication();
+           $depotMed = $_GET['depotMed']; 
+            //$data['lesContreIndic'] = $this->Model_ContreIndicationPC->GetContreIndicsByIds($depotMed);
+           $data['lesPerturbateurs']=$this->Model_ContreIndicationPC->GetMedPerturbateursByIds($depotMed);
+            $this->load->view("v_Perturbe",$data);
+        } 
         }
         ?>
 

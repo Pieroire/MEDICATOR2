@@ -8,10 +8,11 @@ class Model_ContreIndicationPC extends CI_Model
         $sql= $this->db->query("SELECT * FROM medicament");
         return $sql->result();
      }
-     public function GetContreIndicsByIds($depotMed)
+     public function GetMedPerturbateursByIds($depotMed)
              {
-         $sql= $this->db->query("SELECT MED_CONTREINDIC FROM `medicament` WHERE MED_DEPOTLEGAL='".$depotMed."'");
+         $sql= $this->db->query("SELECT MED_MED_PERTURBE from interagir WHERE MED_PERTURBATEUR = '".$depotMed."'");
          return $sql->result();
              }
+             
     
 }
