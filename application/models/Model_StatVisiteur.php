@@ -1,6 +1,6 @@
 <?php
 
-class Model_API extends CI_Model
+class Model_StatVisiteur extends CI_Model
 {
     
     

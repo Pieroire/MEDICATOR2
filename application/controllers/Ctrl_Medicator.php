@@ -150,13 +150,13 @@ class Ctrl_Medicator extends CI_Controller
     
     public function GetAPI(){
         
-        $this->load->model("Model_API");
+        $this->load->model("Model_StatVisiteur");
         
-        $data['visNord'] = $this->Model_API->GetVisNord();
-        $data['visEst'] = $this->Model_API->GetVisEst();
-        $data['visSud'] = $this->Model_API->GetVisSud();
-        $data['visOuest'] = $this->Model_API->GetVisOuest();
-        $data['visParis'] = $this->Model_API->GetVisParis();
+        $data['visNord'] = $this->Model_StatVisiteur->GetVisNord();
+        $data['visEst'] = $this->Model_StatVisiteur->GetVisEst();
+        $data['visSud'] = $this->Model_StatVisiteur->GetVisSud();
+        $data['visOuest'] = $this->Model_StatVisiteur->GetVisOuest();
+        $data['visParis'] = $this->Model_StatVisiteur->GetVisParis();
         
         $this->load->view("v_API", $data);
         
