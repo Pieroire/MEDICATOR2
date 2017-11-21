@@ -10,6 +10,8 @@
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a>
         <br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetLocalisation">Localisation</a>
+        <br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAPI">API</a>
         
     </body>
 </html>

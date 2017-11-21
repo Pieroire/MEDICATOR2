@@ -106,24 +106,6 @@
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         <input id="btn1" type="button" value="Inserer"> <input id="btnM" type="button" value="Modifier">
         
         <br><br>
