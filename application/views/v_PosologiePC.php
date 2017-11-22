@@ -4,6 +4,10 @@
          <meta charset="UTF-8">
 <!--     <meta http-equiv="refresh" content="40" />-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <?php
+            include 'v_bootstrapPC.php';
+        ?>
+        
         <script type="text/javascript" src = "<?php echo base_url();?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
@@ -85,8 +89,8 @@
         
         
         
-    <table border="1.5">
-            <thead>
+    <table border="1.5"class="table">
+            <thead class="thead-dark">
                 <tr> <th>Depot</th><th>Nom</th><th>Code</th><th>Composition</th><th>Effets</th><th>Contre-indication</th><th>Prix</th></tr>
             </thead>
                 <?php 
@@ -115,7 +119,11 @@
         </table>
     <div id="div3"></div>
     <div id="div5"></div>
-<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
+        
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
+        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
 </body>
 </html>

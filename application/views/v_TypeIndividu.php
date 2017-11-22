@@ -3,6 +3,13 @@
         <title>MEDICATOR</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <?php
+            include 'v_bootstrapPC.php';
+        ?>
+        
+        
+        
         <script type="text/javascript" src = "<?php echo base_url();?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         
@@ -63,17 +70,19 @@
                         ?>
                 <option name='optIndividu' value="<?php echo $types->TIN_CODE; ?>"><?php echo $types->TIN_LIBELLE; ?></option> 
                 <?php
-                      $code =$types->TIN_CODE + 1; 
+                      $code = $types ->TIN_CODE + 1; 
                         }                       
                 ?>
             </select>
         <p id="p1" hidden><?php echo $code; ?></p>       
         <div id="div1"></div> 
         <div id="div2"></div>  
+        
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Posologie </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
+        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
         </div>
     </body>
 </html>

@@ -129,6 +129,15 @@ public function GetAllMedicamentsContreIndication()
            $data['lesPerturbateurs']=$this->Model_ContreIndicationPC->GetMedPerturbateursByIds($depotMed);
             $this->load->view("v_Perturbe",$data);
         } 
+        public function statistique()
+                {
+            $this->load->model("Model_StatsPC");
+            $data['leMaxMED'] = $this->Model_StatsPC->PrescriptionPlusGrandMED();
+            $data['leTotalMED'] = $this->Model_StatsPC->PrecriptionTotalMED();
+            $data['leMaxTIN'] = $this->Model_StatsPC->PrescriptionPlusGrandTIN();
+            $data['leTotalTIN'] = $this->Model_StatsPC->PrecriptionTotalTIN();
+            $this->load->view("v_StatsPC",$data);
+                }
         }
         ?>
 

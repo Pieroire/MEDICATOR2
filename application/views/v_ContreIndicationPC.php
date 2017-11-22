@@ -4,6 +4,10 @@
          <meta charset="UTF-8">
 <!--     <meta http-equiv="refresh" content="40" />-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <?php
+            include 'v_bootstrapPC.php';
+        ?>
+        
         <script type="text/javascript" src = "<?php echo base_url();?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
@@ -27,7 +31,7 @@
 //                            $('#txtContre').val($(this).children(0).eq(5).text());
 //                            $('#txtPrix').val($(this).children(0).eq(6).text());
 //                           //}
-                        alert('sa fonctionne'+ $('#txtDepot').val());
+                        //alert('sa fonctionne'+ $('#txtDepot').val());
                           AfficherContreIndic();
                           
                           
@@ -80,6 +84,10 @@
 
 
    
-<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a>
+<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
+        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
 </body>
 </html>

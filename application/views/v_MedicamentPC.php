@@ -6,6 +6,10 @@
         <meta charset="UTF-8">
 <!--     <meta http-equiv="refresh" content="40" />-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <?php
+            include 'v_bootstrapPC.php';
+        ?>
+        
         <script type="text/javascript" src = "<?php echo base_url();?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
@@ -75,7 +79,7 @@
         <input id="btn1" type="button" value="Inserer">
         <input id="btn2" type="button" value="Modifier">
 
-        <table border="1.5">
+        <table border="1.5" class="table" >
             <thead>
                 <tr> <th>Depot</th><th>Nom</th><th>Code</th><th>Composition</th><th>Effets</th><th>Contre-indication</th><th>Prix</th></tr>
             </thead>
@@ -106,27 +110,12 @@
         
         <div id="div1"></div>
         <div id="div2"></div>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
+        
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
         <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Posologie </a><br>
+        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
         <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
     
     </body>
 </html>
-<!--        <select id="lstMedic" multiple >
-                <?php 
-                    foreach($lesMedicaments as $medicament)
-                        {
-                        ?>
-            <option id="optPrincipal" value="<?php echo $medicament->MED_DEPOTLEGAL; ?>">   <?php echo $medicament->MED_DEPOTLEGAL; ?>   <?php echo $medicament->MED_NOMCOMMERCIAL;?>   <?php echo $medicament->FAM_CODE;?>   <?php echo $medicament->MED_COMPOSITION;?>   <?php echo $medicament->MED_EFFETS;?>   <?php echo $medicament->MED_CONTREINDIC;?>   <?php echo $medicament->MED_PRIXECHANTILLON;?></option> 
-            <option id="optDepot" hidden> <?php echo $medicament->MED_DEPOTLEGAL; ?> </option>
-            <option id="optNom" hidden> <?php echo $medicament->MED_NOMCOMMERCIAL;?> </option> 
-            <option id="optFam" hidden> <?php echo $medicament->FAM_CODE;?> </option> 
-            <option id="optCompo" hidden> <?php echo $medicament->MED_COMPOSITION;?> </option> 
-            <option id="optEffets" hidden> <?php echo $medicament->MED_EFFETS;?> </option> 
-            <option id="optContre" hidden> <?php echo $medicament->MED_CONTREINDIC;?> </option>
-            <option id="optPrix" hidden> <?php echo $medicament->MED_PRIXECHANTILLON;?> </option> 
-                <?php 
-                        }                       
-                ?>
-        
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"></select>-->
