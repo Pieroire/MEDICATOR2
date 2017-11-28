@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <?php
+        include 'bootstrap.php';
+        ?>
+        
         <script type="text/javascript" src="<?php echo base_url(); ?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
         
@@ -59,14 +63,14 @@
         
         
     </head>
-    <body>
-        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
+    <body style="background-color: #F5F5F5; margin-left: 10px; margin-bottom: 10px;">
+        <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR</a></i></u></h1>
+            <h2 style="font-family: Impact;">Localisation</h2><br>
         
-        <br>
         
-        <label>Selectionnez un visiteur et la région dans laquelle il travaille :</label><br><br>
+        <div class="form-inline"><label>Selectionnez un visiteur et la région dans laquelle il travaille :</label><br><br>
         
-        <select id="lstVis">
+            <select class="form-control" id="lstVis">
             
             <?php
 
@@ -88,15 +92,16 @@
             
         </select>
         
-        <input type="text" id="visSelect" placeholder="Visiteur sélectionné" disabled>
+            <input class="form-control" type="text" id="visSelect" placeholder="Visiteur sélectionné" disabled></div>
         
-        <br><br>
+        <br>
         
-        <label>Date d'embauche : </label> <input type="text" id="visDate" disabled>
+        <div class="form-inline"><label>Date d'embauche : </label> <input class="form-control" type="text" id="visDate" disabled></div>
         
-        <br><br>
+        <br>
         
-        <select id="lstReg">
+        <div class="form-inline">
+            <select class="form-control" id="lstReg">
                 
                     <?php
 
@@ -113,22 +118,28 @@
                     ?>
         </select>
         
-        <input type="text" id="regSelect" placeholder="Région sélectionnée" disabled>
+            <input class="form-control" type="text" id="regSelect" placeholder="Région sélectionnée" disabled></div>
         
-        <br><br>
+        <br>
         
-        <textarea id="textareaT" placeholder="Ajouter un commentaire sur le travail du visiteur..." style="height: 100px; width: 350px;"></textarea>
+        <textarea class="form-control" id="textareaT" placeholder="Ajouter un commentaire sur le travail du visiteur..." style="height: 100px; width: 350px;"></textarea>
         
-        <br><br>
+        <br>
         
         
-        <input type="button" id="btnT" value="Insérer">
+        <input class="btn btn-success" type="button" id="btnT" value="Insérer"><br>
         
         <div id="divT" hidden></div>
             
-       
+        <br>
         
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetRegion">Région</a></button>
+ 
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a></button>
+
+       <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAPI">Statistiques diverses</a></button>
         
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>">Accueil</a></button>
         
         
         

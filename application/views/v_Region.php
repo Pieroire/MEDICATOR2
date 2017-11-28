@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <?php
+        include 'bootstrap.php';
+        ?>
+        
         <script type="text/javascript" src="<?php echo base_url(); ?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
         
@@ -38,16 +42,17 @@
         
         
     </head>
-    <body>
+    <body style="background-color: #F5F5F5; margin-left: 10px; margin-bottom: 10px;">
         
-        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
+        <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR</a></i></u></h1>
+            <h2 style="font-family: Impact;">Les Régions</h2><br>
         
-        <br>
+       
         
        
         <label>Cliquez sur la région à modifier :</label> <br><br>
     
-            <select id="lstRegion">
+        <div class="form-inline"><select class="form-control" id="lstRegion">
                 
                     <?php
 
@@ -57,27 +62,37 @@
                     ?>
                 
 
-                <option name="<?php echo $region->SEC_CODE; ?>" value="<?php echo $region->REG_CODE; ?>"><?php echo $region->REG_NOM; ?></option>
+                <option name="<?php echo $region->SEC_LIBELLE; ?>" value="<?php echo $region->REG_CODE; ?>"><?php echo $region->REG_NOM; ?></option>
                     
                     <?php
                     }
                     ?>
-            </select>
+            </select></div>
        
-        
+        <br><br>
         <div>
             <input id="idRegion" hidden="" value="">
-            <label>Code Région :</label> <input id="codeRegion" disabled><br><br>
-            <label>Secteur :</label> <input id="secteur" disabled><br><br>
-            <label>Nom de la Région :</label> <input id="nomRegion" type="text"> <input id="sub1" type="button" value ="Modifier"  >
+            <div class="form-inline"><label>Code Région :</label> <input class="form-control" id="codeRegion" disabled></div><br>
+            <div class="form-inline"><label>Secteur :</label> <input class="form-control" id="secteur" disabled></div><br>
+            <div class="form-inline"><label>Nom de la Région :</label> <input class="form-control" id="nomRegion" type="text"> <input class="btn btn-danger" id="sub1" type="button" value ="Modifier"  >
             
             
-        </div>
+        </div></div>
         
         <div id="divR"></div>
         
-      
+        <br>
         
+      
+
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a></button>
+        
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetLocalisation">Localisation</a></button>
+        
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAPI">Statistiques diverses</a></button>
+        
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>">Accueil</a></button>
+
         
     </body>
 </html>

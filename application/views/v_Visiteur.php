@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <?php
+        include 'bootstrap.php';
+        ?>
+        
         <script type="text/javascript" src="<?php echo base_url(); ?>JS/lesFonctions.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>JQuery/jquery-3.1.1.js"></script>
         
@@ -44,26 +48,39 @@
         
         
     </head>
-    <body>
+    <body style="background-color: #F5F5F5; margin-left: 10px; margin-bottom: 10px;">
 
-        <a href="<?php echo base_url(); ?>"><img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a>
-        
-        <br>
+        <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR</a></i></u></h1>
+            <h2 style="font-family: Impact;">Les Visiteurs</h2><br>
         
         
         <input id="idVisiteur" hidden="" value="">
         
         
-        <label>Matricule :</label> <input id="txtMatricule" type="text"><br><br>
-        <label>Nom :</label> <input id="txtNom" type="text"><br><br>
-        <label>Prénom :</label> <input id="txtPrenom" type="text"><br><br>
-        <label>Adresse :</label> <input id="txtAdresse" type="text"><br><br>
-        <label>Code Postal :</label> <input id="txtCP" type="text"><br><br>
-        <label>Ville :</label> <input id="txtVille" type="text"><br><br>
-        <label>Date d'embauche :</label> <input id="txtDateE" type="date"><br><br>
-        <label>Code Secteur :</label> <!--<input id="txtCodeSec" type="text"><br><br>-->
+        <div class="form-inline"><label>Matricule :</label> 
+            <input class="form-control" id="txtMatricule" type="text"></div><br>
+            
+        <div class="form-inline"><label>Nom :</label> 
+            <input class="form-control" id="txtNom" type="text"></div><br>
         
-        <select id="txtCodeSec">
+        <div class="form-inline"><label>Prénom :</label> 
+        <input class="form-control" id="txtPrenom" type="text"></div><br>
+        
+        <div class="form-inline"><label>Adresse :</label> 
+        <input class="form-control" id="txtAdresse" type="text"></div><br>
+        
+        <div class="form-inline"><label>Code Postal :</label> 
+        <input class="form-control" id="txtCP" type="text"></div><br>
+        
+        <div class="form-inline"><label>Ville :</label> 
+        <input class="form-control" id="txtVille" type="text"></div><br>
+        
+        <div class="form-inline"><label>Date d'embauche :</label> 
+            <input class="form-control" id="txtDateE" type="date"></div><br>
+        
+        <div class="form-inline"><label>Code Secteur :</label> <!--<input id="txtCodeSec" type="text"><br><br>-->
+        
+            <select class="form-control" id="txtCodeSec">
                 
                     <?php
 
@@ -78,14 +95,14 @@
                     <?php
                     }
                     ?>
-            </select><br><br>
+            </select></div><br>
         
         
         
         
-        <label>Code Laboratoire :</label> <!--<input id="txtCodeLabo" type="text">--> 
+        <div class="form-inline"><label>Code Laboratoire :</label> <!--<input id="txtCodeLabo" type="text">--> 
             
-        <select id="txtCodeLabo">
+                <select class="form-control" id="txtCodeLabo">
                 
                     <?php
 
@@ -100,13 +117,13 @@
                     <?php
                     }
                     ?>
-        </select>   
+        </select> 
             
             
             
             
             
-        <input id="btn1" type="button" value="Inserer"> <input id="btnM" type="button" value="Modifier">
+        <input id="btn1" type="button" value="Inserer" class="btn btn-success"> <input id="btnM" type="button" value="Modifier" class="btn btn-danger"></div>
         
         <br><br>
         
@@ -114,7 +131,7 @@
         <br><br>
 
         
-        <table border="1.5">
+        <table border="1.5" class="table table-striped">
             <thead>
                 <tr> <th>Matricule</th><th>Nom</th><th>Prénom</th><th>Adresse</th><th>CP</th><th>Ville</th><th>Date d'embauche</th><th>Code secteur</th><th>Code laboratoire</th></tr>
             </thead>
@@ -144,12 +161,17 @@
         
         <div id='divV'></div>
         <div id='divM'></div>
+        
+        <br>
 
-        
-        
-        
-     
 
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetRegion">Région</a></button>
         
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetLocalisation">Localisation</a></button>
+        
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAPI">Statistiques diverses</a></button>
+        
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>">Accueil</a></button>
+
     </body>
 </html>

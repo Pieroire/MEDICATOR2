@@ -1,6 +1,10 @@
 <html>
   <head>
     
+    <?php
+    include 'bootstrap.php';
+    ?>
+    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -51,8 +55,9 @@
       }
     </script>
   </head>
-  <body>
-      
+  <body style="background-color: #F5F5F5; margin-left: 10px; margin-bottom: 10px;">
+      <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR</a></i></u></h1>
+      <br>
       
     <div id="piechart" style="width: 900px; height: 500px;"></div>
     
@@ -60,7 +65,16 @@
     
     <br><br>
     
-    <a href="<?php echo base_url(); ?>">Accueil</a>
+    <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetRegion">Région</a></button>
+
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetVisiteur">Visiteur</a></button>
+
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetLocalisation">Localisation</a></button>
+
+        <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>">Accueil</a></button>
+        
+        
+        
     
   </body>
 </html>
