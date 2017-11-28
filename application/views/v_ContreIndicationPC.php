@@ -43,14 +43,15 @@
                );
         </script>
 </head>
-<body>
-    <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1>
-    <h1 align="left"><u>Contre Indication d'un médicament</u></h1><br>
+<body style="background-color:#F5F5F5; margin-left: 10px; margin-bottom: 10px" >
+   <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR<img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a></i></u></h1>
+    
+    <h2 style="font-family: Impact;" align="left">Contre Indication d'un médicament</h2><br>
     <label>Cliquer sur un Médicament pour voir les médicaments déconseilé:</label>
     
     <input id="txtDepot" type="text" hidden>
 
-    <div id="divContre"></div>
+    <div id="divContre"></div><br>
     
     
     <table border="1.5">    
@@ -67,7 +68,7 @@
                 <tr>
                     <td><?php echo $medicament->MED_DEPOTLEGAL; ?></td>
                     <td><?php echo $medicament->MED_NOMCOMMERCIAL;?></td>
-                    <td><input type="button" class="btn btn-success" value=" "></td>
+                    <td><input type="button" class="btn btn-primary" value=" "></td>
                     <td hidden><?php echo $medicament->FAM_CODE;?></td>
                     <td hidden><?php echo $medicament->MED_COMPOSITION;?></td>
                     <td hidden><?php echo $medicament->MED_EFFETS;?></td>
@@ -82,14 +83,14 @@
                         }                       
                 ?>
         
-        </table>
+    </table><br>
 
 
    
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
-    <button type="button"  class="btn btn-default"> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
-    <button type="button"  class="btn btn-default"> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+    <button type="button"  class="btn btn-primary"> <a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+    <button type="button"  class="btn btn-primary"> <a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
 </body>
 </html>

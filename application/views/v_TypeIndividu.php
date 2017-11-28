@@ -50,16 +50,17 @@
         
         
     </head>
-    <body>
+    <body style="background-color:#F5F5F5; margin-left: 10px; margin-bottom: 10px" >
+        
 <!--        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> <img src = "<?php echo base_url();?>Image/logo.png"></a><br>-->
         <div id="divTypesIndividus">
-            <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1>
-            <h1 align="left"><u>Les Types Individus</u></h1><br>
+      <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR<img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a></i></u></h1>
+            <h2 style="font-family: Impact;" align="left">Les Types Individus</h2><br>
         <div>
             <p><i>Veuillez saisir un type d'individus :</i></p>
 <!--             <div class="form-inline"><label>Depot légal:    </label> <input class="form-control" id="txtDepot" type="text"></div><br>-->
             <div class="form-inline"><input class="form-control" id="txt1" type="text">
-            <input id="sub1" type="button" class="btn btn-primary" value ="Modifier"  >
+            <input id="sub1" type="button" class="btn btn-danger" value ="Modifier"  >
             <input id="sub2" type="button" class="btn btn-success" value ="Inserer"></div><br>
         </div>
        
@@ -82,11 +83,12 @@
         <div id="div1"></div> 
         <div id="div2"></div>  <br><br>
         
-        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
-        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
-        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br></button>
-        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br></button>
-        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> </button>
+        
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> </button>
         </div>
     </body>
 </html>

@@ -50,13 +50,14 @@
                );
         </script>
 </head>
-<body>
+<body style="background-color:#F5F5F5; margin-left: 10px; margin-bottom: 10px" >
     
 <!--    <div class="progress" id="progress25">
   <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>-->
-    <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1><br>
-    <h1 align="left"><u>Prescription</u></h1><br>
+    <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR<img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a></i></u></h1>
+    
+    <h2 style="font-family: Impact;" >Prescription</h2><br>
         <div class="form-inline"><label>Depot légal:    </label> <input class="form-control" id="txtDepot" type="text"></div><br>
         <div class="form-inline"><label>Nom Comercial: </label><input class="form-control" id="txtNom" type="text"></div><br>
         <div class="form-inline"><label>Famille: </label><input class="form-control" id="txtFam" type="text"></div><br>
@@ -129,10 +130,10 @@
 
     <div id="div3"></div>
     <div id="div5"></div>
-    <button type="button"  class="btn btn-default"value=""><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
 </body>
 </html>

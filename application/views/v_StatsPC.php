@@ -61,15 +61,15 @@
       }
     </script>
   </head>
-  <body>
-      <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1>
+ <body style="background-color:#F5F5F5; margin-left: 10px; margin-bottom: 10px" >
+      <h1 style="font-family: Impact;" align="center"><u><i><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index">MEDICATOR<img src = "<?php echo base_url();?>Image/medicament.png" style="width: 50px; height: 50px;"></a></i></u></h1>
      
     <div id="piechart"  style="width: 900px; height: 500px;"></div><br>
     <div id="piechart2" style="width: 900px; height: 500px;"></div>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
-    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> </button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
+    <button type="button"  class="btn btn-primary"><a style="color: white;" href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> </button>
   </body>
 </html>
