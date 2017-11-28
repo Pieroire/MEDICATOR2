@@ -32,7 +32,7 @@
                         (
                                 function()
                         {
-                          
+                            
                             $('#txtDepot').val($(this).children(0).eq(0).text());
                             $('#txtNom').val($(this).children(0).eq(1).text());
                             $('#txtFam').val($(this).children(0).eq(2).text());
@@ -51,17 +51,22 @@
         </script>
 </head>
 <body>
-    <h1> Medicament séléctionné </h1>
-        <label>Depot légal: </label> <input id="txtDepot" type="text"><br>
-        <label>Nom Comercial: </label><input id="txtNom" type="text"><br>
-        <label>Famille: </label><input id="txtFam" type="text"><br>
-        <label>Composition: </label><input id="txtCompo" type="text"><br>
-        <label>Effets: </label><input id="txtEffets" type="text"><br>
-        <label>Contre indication: </label><input id="txtContre" type="text"><br>
-        <label>Prix echantillon: </label><input id="txtPrix" type="text"><br>
+    
+<!--    <div class="progress" id="progress25">
+  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>-->
+    <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1><br>
+    <h1 align="left"><u>Prescription</u></h1><br>
+        <div class="form-inline"><label>Depot légal:    </label> <input class="form-control" id="txtDepot" type="text"></div><br>
+        <div class="form-inline"><label>Nom Comercial: </label><input class="form-control" id="txtNom" type="text"></div><br>
+        <div class="form-inline"><label>Famille: </label><input class="form-control" id="txtFam" type="text"></div><br>
+        <div class="form-inline"><label>Composition: </label><input class="form-control" id="txtCompo" type="text"></div><br>
+        <div class="form-inline"><label>Effets: </label><input class="form-control" id="txtEffets" type="text"></div><br>
+        <div class="form-inline"><label>Contre indication: </label><input class="form-control" id="txtContre" type="text"></div><br>
+        <div class="form-inline"><label>Prix echantillon: </label><input class="form-control" id="txtPrix" type="text"></div><br>
        
-        
-        <select id="lstTypes" multiple=''>
+        <div class="form-inline">
+        <select id="lstTypes" class="form-control">
                 <?php 
                     foreach($lesTypesIndividusPosologie as $types)
                         {
@@ -73,7 +78,7 @@
                         }                       
                 ?>
             </select>
-        <select id="lstDosages" multiple=''>
+        <select id="lstDosages" class="form-control">
                 <?php 
                     foreach($lesDosages as $dosages)
                         {
@@ -85,11 +90,12 @@
                         }                       
                 ?>
             </select>
-        <label>Veuillez saisir la posologie (en mg ou en qté):</label><input id="txtPoso" type="text"><input id="btnValider" type="button" value="Valider">
+            
+        <label>Veuillez saisir la posologie (en mg ou en qté):</label><input <input class="form-control" id="txtPoso" type="text"> <input id="btnValider" type="button" class="btn btn-success" value="Valider"> </div>   
         
         
         
-    <table border="1.5"class="table">
+    <table border="1.5"class="table table-striped">
             <thead class="thead-dark">
                 <tr> <th>Depot</th><th>Nom</th><th>Code</th><th>Composition</th><th>Effets</th><th>Contre-indication</th><th>Prix</th></tr>
             </thead>
@@ -117,13 +123,16 @@
                 ?>
         
         </table>
+        
+        
+
+
     <div id="div3"></div>
     <div id="div5"></div>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
-        
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
-        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
+    <button type="button"  class="btn btn-default"value=""><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
 </body>
 </html>

@@ -44,7 +44,9 @@
         </script>
 </head>
 <body>
-    <h1> Contre Indication d'un médicament</h1>
+    <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1>
+    <h1 align="left"><u>Contre Indication d'un médicament</u></h1><br>
+    <label>Cliquer sur un Médicament pour voir les médicaments déconseilé:</label>
     
     <input id="txtDepot" type="text" hidden>
 
@@ -65,7 +67,7 @@
                 <tr>
                     <td><?php echo $medicament->MED_DEPOTLEGAL; ?></td>
                     <td><?php echo $medicament->MED_NOMCOMMERCIAL;?></td>
-                    <td><input type="button" value=" "></td>
+                    <td><input type="button" class="btn btn-success" value=" "></td>
                     <td hidden><?php echo $medicament->FAM_CODE;?></td>
                     <td hidden><?php echo $medicament->MED_COMPOSITION;?></td>
                     <td hidden><?php echo $medicament->MED_EFFETS;?></td>
@@ -84,10 +86,10 @@
 
 
    
-<a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
-        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+    <button type="button"  class="btn btn-default"> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+    <button type="button"  class="btn btn-default"> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button> 
+    <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
 </body>
 </html>

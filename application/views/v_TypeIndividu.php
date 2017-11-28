@@ -53,16 +53,18 @@
     <body>
 <!--        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> <img src = "<?php echo base_url();?>Image/logo.png"></a><br>-->
         <div id="divTypesIndividus">
-        <h1>Les Types Individus</h1>
+            <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1>
+            <h1 align="left"><u>Les Types Individus</u></h1><br>
         <div>
-            <p>Veuillez saisir un type d'individus :</p>
-            <input id="txt1" type="text">
-            <input id="sub1" type="button" value ="Modifier"  >
-            <input id="sub2" type="button" value ="Inserer">
+            <p><i>Veuillez saisir un type d'individus :</i></p>
+<!--             <div class="form-inline"><label>Depot légal:    </label> <input class="form-control" id="txtDepot" type="text"></div><br>-->
+            <div class="form-inline"><input class="form-control" id="txt1" type="text">
+            <input id="sub1" type="button" class="btn btn-primary" value ="Modifier"  >
+            <input id="sub2" type="button" class="btn btn-success" value ="Inserer"></div><br>
         </div>
-        
-        
-            <select id="lstTypes" multiple=''>
+       
+            <div class="form-inline">
+            <select id="lstTypes" class="form-control">
                 <?php 
                     foreach($lesTypesIndividus as $types)
                         {
@@ -74,15 +76,17 @@
                         }                       
                 ?>
             </select>
+            </div>
+        
         <p id="p1" hidden><?php echo $code; ?></p>       
         <div id="div1"></div> 
-        <div id="div2"></div>  
+        <div id="div2"></div>  <br><br>
         
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
-        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicaments"> Medicaments </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> </button>
         </div>
     </body>
 </html>

@@ -67,17 +67,18 @@
         
         <input id="idMedicament" hidden="" value="">
         
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> <img src = "<?php echo base_url();?>Image/logo.png"></a><br>
-        <h1> Medicaments </h1>
-        <label>Depot légal: </label> <input id="txtDepot" type="text"><br>
-        <label>Nom Comercial: </label><input id="txtNom" type="text"><br>
-        <label>Famille: </label><input id="txtFam" type="text"><br>
-        <label>Composition: </label><input id="txtCompo" type="text"><br>
-        <label>Effets: </label><input id="txtEffets" type="text"><br>
-        <label>Contre indication: </label><input id="txtContre" type="text"><br>
-        <label>Prix echantillon: </label><input id="txtPrix" type="text"><br>
-        <input id="btn1" type="button" value="Inserer">
-        <input id="btn2" type="button" value="Modifier">
+<!--        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> <img src = "<?php echo base_url();?>Image/logo.png"></a><br>-->
+        <h1 style="font-family: Impact;" align="center"><u><i>MEDICATOR</i></u></h1><br>
+        <h1><u>Ajout/Modification d'un Médicament</u></h1><br>
+        <div class="form-inline"><label>Depot légal:    </label> <input class="form-control" id="txtDepot" type="text"></div><br>
+        <div class="form-inline"><label>Nom Comercial: </label><input class="form-control" id="txtNom" type="text"></div><br>
+        <div class="form-inline"><label>Famille: </label><input class="form-control" id="txtFam" type="text"></div><br>
+        <div class="form-inline"><label>Composition: </label><input class="form-control" id="txtCompo" type="text"></div><br>
+        <div class="form-inline"><label>Effets: </label><input class="form-control" id="txtEffets" type="text"></div><br>
+        <div class="form-inline"><label>Contre indication: </label><input class="form-control" id="txtContre" type="text"></div><br>
+        <div class="form-inline"><label>Prix echantillon: </label><input class="form-control" id="txtPrix" type="text"></div><br>
+        <input id="btn1" type="button" class="btn btn-success" value="Inserer">
+        <input id="btn2" type="button" class="btn btn-primary" value="Modifier">
 
         <table border="1.5" class="table" >
             <thead>
@@ -109,13 +110,12 @@
         </table>
         
         <div id="div1"></div>
-        <div id="div2"></div>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a><br><br>
-        
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a><br>
-        <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a><br>
-        <br><br> <a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a> 
+        <div id="div2"></div><br><br>
+        <button type="button"  class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetTypesIndividus"> Types individus </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetMedicamentsPosologie"> Préscritpion </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/GetAllMedicamentsContreIndication"> Contre Indication </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/statistique"> Statistiques </a></button>
+        <button type="button" class="btn btn-default"><a href="<?php echo base_url(); ?>index.php/Ctrl_Medicator/index"> Accueil </a></button>
     
     </body>
 </html>
